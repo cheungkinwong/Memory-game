@@ -5,17 +5,53 @@ html {
 #memory {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 6fr;
-      grid-template-columns: 6fr;
-  -ms-grid-rows: 20px 1fr 1fr 1fr 1fr;
-      grid-template-rows: 20px 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
+  -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  -ms-grid-rows: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
 }
 
-.card {
-  border: 1px solid;
-  border-radius: 2px;
-  height: 15vh;
-  width: 10vw;
+#cardContainer {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  width: 20vw;
+  height: 50vh;
+}
+
+#cardContainer > img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  max-height: 100%;
+}
+
+.flip {
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+  position: relative;
+}
+
+.front,
+.back {
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+}
+
+.front {
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+          transform: rotateY(0deg);
+}
+
+.back {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=style.css.map */
