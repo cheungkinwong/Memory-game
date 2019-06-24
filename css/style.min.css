@@ -1,2 +1,2 @@
-html{font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif}
+html{font-family:"Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif}#memory{display:-ms-grid;display:grid;-ms-grid-columns:6fr;grid-template-columns:6fr;-ms-grid-rows:20px 1fr 1fr 1fr 1fr;grid-template-rows:20px 1fr 1fr 1fr 1fr;grid-gap:10px}.card{border:1px solid;border-radius:2px;height:15vh;width:10vw}
 /*# sourceMappingURL=style.min.css.map */
