@@ -3,7 +3,7 @@
 }
 
 html {
-  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-family: "Great Vibes", cursive;
 }
 
 #memory {
@@ -12,6 +12,18 @@ html {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#score {
+  color: whitesmoke;
+  z-index: 4;
+  width: 10vw;
+  height: 10vh;
+  position: absolute;
+}
+
+.myTurn {
+  color: red;
 }
 
 .cardContainer {

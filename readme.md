@@ -8,10 +8,10 @@ collision detection
 by Cheung Kin Wong
 
 ##Must-have features
-[ ]Clicking cards turns them around
-[ ]Randomly position the cards
-[ ]Readme, but that shouldn't even have to be said
-[ ]Explanation on the page itself
+[x]Clicking cards turns them around
+[x]Randomly position the cards
+[x]Readme, but that shouldn't even have to be said
+[x]Explanation on the page itself
 
 ##Nice-to-have features
 [ ]Make it playable by keyboard
