@@ -6,24 +6,6 @@ html {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
 #memory {
   width: 100vw;
   height: 100vh;
@@ -46,6 +28,7 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  z-index: 5;
 }
 
 .card {
@@ -64,8 +47,8 @@ img {
   width: 100%;
   max-height: auto;
   border-radius: 10px;
-  -webkit-box-shadow: 10px 10px 10px #2d2d33;
-          box-shadow: 10px 10px 10px #2d2d33;
+  -webkit-box-shadow: 0px 0px 10px #725e85;
+          box-shadow: 0px 0px 10px #725e85;
 }
 
 .front,
@@ -104,14 +87,32 @@ img {
 }
 
 .stars {
-  background: #232324 url("./img/stars.png") repeat top center;
+  background: black url("/img/stars2.png") repeat top center;
   z-index: 0;
 }
 
 .twinkling {
-  background: transparent url("./imgs/twinkling.png") repeat top center;
+  background: transparent url("/img/twinkling.png") repeat top center;
   z-index: 1;
   -webkit-animation: move-twink-back 200s linear infinite;
           animation: move-twink-back 200s linear infinite;
+}
+
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
