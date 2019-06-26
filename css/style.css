@@ -47,12 +47,12 @@
 }
 
 .stars {
-  background: black url("/img/stars2.png") repeat top center;
+  background: black url("../img/stars2.png") repeat top center;
   z-index: 0;
 }
 
 .twinkling {
-  background: transparent url("/img/twinkling.png") repeat top center;
+  background: transparent url("../img/twinkling.png") repeat top center;
   z-index: 1;
   -webkit-animation: move-twink-back 200s linear infinite;
           animation: move-twink-back 200s linear infinite;
@@ -66,7 +66,7 @@
   display: flex;
 }
 
-.myTurn {
+.selected {
   color: #918053;
   text-shadow: 2px 2px 5px #725e85;
 }

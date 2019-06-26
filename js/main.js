@@ -1,5 +1,6 @@
 const memory = document.getElementById("memory");
 const card = document.querySelectorAll(".card");
+const cardContainer = document.querySelector(".cardContainer");
 const music = document.getElementById("dearlyBeloved");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
@@ -50,8 +51,8 @@ function dealCards() {
 }
 
 function changeTurn() {
-  p1.classList.toggle("myTurn");
-  p2.classList.toggle("myTurn");
+  p1.classList.toggle("selected");
+  p2.classList.toggle("selected");
   if (player1) {
     player1 = false;
   } else {
@@ -136,11 +137,9 @@ function reset() {
 }
 
 tarrotStyle.addEventListener("click", style);
-function style() {
-  console.log("lol");
-}
-
 dreamStyle.addEventListener("click", style);
+
 function style() {
-  console.log("lol");
+  if (dream) {
+  }
 }
