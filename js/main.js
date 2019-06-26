@@ -84,13 +84,16 @@ function compare() {
       pairsFound += 1;
       p2Score.innerHTML = score2;
     }
-    if (pairsFound === 5) {
-      if (score1 > score2) {
-        result.innerHTML = "Player 1 Won <br/> Play Again?";
-      } else {
-        result.innerHTML = "Player 2 Won <br/> Play Again?";
+    setTimeout(() => {
+      if (pairsFound === 5) {
+        if (score1 > score2) {
+          result.innerHTML = "Player 1 Won <br/> Play Again?";
+        } else {
+          result.innerHTML = "Player 2 Won <br/> Play Again?";
+        }
       }
-    }
+    }, 1500);
+
     firstCard.removeEventListener("click", flip);
     secondCard.removeEventListener("click", flip);
     clearBoard();
