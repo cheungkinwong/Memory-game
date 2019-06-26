@@ -131,6 +131,18 @@ img {
           transform: rotateY(180deg);
 }
 
+#cardFace {
+  z-index: 4;
+  width: 10vw;
+  height: 10vh;
+  top: 90%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  position: absolute;
+  text-align: center;
+  padding: 1em;
+}
+
 #score {
   z-index: 4;
   width: 10vw;

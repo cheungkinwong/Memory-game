@@ -4,8 +4,8 @@ const music = document.getElementById("dearlyBeloved");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
 const playGuide = document.querySelector(".playGuide");
-const tarrot = document.getElementById("tarrot");
-const dream = document.getElementById("dream");
+const tarrotStyle = document.getElementById("tarrot");
+const dreamStyle = document.getElementById("dream");
 const result = document.getElementById("result");
 
 let p1Score = document.getElementById("p1score");
@@ -15,6 +15,7 @@ let score2 = 0;
 let pairsFound = 0;
 
 let player1 = true;
+let dream = true;
 let newTurn = false;
 let wait = false;
 let firstCard, secondCard;
@@ -132,4 +133,14 @@ function reset() {
     cardReset.classList.remove("flip");
   });
   setTimeout(addFlip, dealCards, 1000);
+}
+
+tarrotStyle.addEventListener("click", style);
+function style() {
+  console.log("lol");
+}
+
+dreamStyle.addEventListener("click", style);
+function style() {
+  console.log("lol");
 }
