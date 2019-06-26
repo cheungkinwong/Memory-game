@@ -16,5 +16,5 @@ by Cheung Kin Wong
 ##Nice-to-have features
 [ ]Make it playable by keyboard
 [ ]Let a user define custom image urls
-[ ]Make it pleasing to look at
-[ ]Multiplayer (local)
+[x]Make it pleasing to look at
+[x]Multiplayer (local)

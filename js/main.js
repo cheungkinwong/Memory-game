@@ -3,6 +3,8 @@ const card = document.querySelectorAll(".card");
 const music = document.getElementById("dearlyBeloved");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
+const playGuide = document.querySelector(".playGuide");
+console.log(playGuide);
 
 let p1Score = document.getElementById("p1score");
 let p2Score = document.getElementById("p2score");
@@ -22,6 +24,14 @@ start();
 function start() {
   playMusic();
   dealCards();
+}
+
+playGuide.addEventListener("click", fade);
+function fade() {
+  playGuide.classList.add("fade");
+  setTimeout(() => {
+    playGuide.style.display = "none";
+  }, 3000);
 }
 
 function dealCards() {
@@ -81,14 +91,8 @@ function compare() {
 }
 
 function playMusic() {
-  console.log("lol");
-  let playPromise = music.play();
   music.loop = true;
-  if (playPromise !== null) {
-    playPromise.catch(() => {
-      music.play();
-    });
-  }
+  // music.play();
 }
 
 function clearBoard() {

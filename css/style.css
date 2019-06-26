@@ -1,9 +1,46 @@
+@-webkit-keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@keyframes move-twink-back {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: -10000px 5000px;
+  }
+}
+
+@-webkit-keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 * {
   margin: 0;
 }
 
 html {
   font-family: "Great Vibes", cursive;
+  color: #b8b8b8;
 }
 
 #memory {
@@ -15,15 +52,42 @@ html {
 }
 
 #score {
-  color: whitesmoke;
   z-index: 4;
   width: 10vw;
   height: 10vh;
   position: absolute;
+  text-align: center;
+  padding: 1em;
+}
+
+.playGuide {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  z-index: 6;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.playGuide p {
+  background-color: rgba(0, 0, 0, 0.383);
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 0px 10px #725e85;
+          box-shadow: 0px 0px 10px #725e85;
+  padding: 2em;
+  line-height: 2em;
+  font-size: 3rem;
+  text-align: center;
+}
+
+.fade {
+  -webkit-animation: fade 3s linear forwards;
+          animation: fade 3s linear forwards;
 }
 
 .myTurn {
-  color: red;
+  color: #918053;
+  text-shadow: 2px 2px 5px #725e85;
 }
 
 .cardContainer {
@@ -108,23 +172,5 @@ img {
   z-index: 1;
   -webkit-animation: move-twink-back 200s linear infinite;
           animation: move-twink-back 200s linear infinite;
-}
-
-@-webkit-keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
-}
-
-@keyframes move-twink-back {
-  from {
-    background-position: 0 0;
-  }
-  to {
-    background-position: -10000px 5000px;
-  }
 }
 /*# sourceMappingURL=style.css.map */
