@@ -111,6 +111,7 @@ function compare() {
 function playMusic() {
   music.loop = true;
   music.play();
+  music.volume = 0.2;
 }
 
 function clearBoard() {
