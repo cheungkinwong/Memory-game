@@ -18,3 +18,8 @@ by Cheung Kin Wong
 [ ]Let a user define custom image urls
 [x]Make it pleasing to look at
 [x]Multiplayer (local)
+
+##Extra features
+[x]Added fancy background
+[x]Add music
+[x]Make it reset after finishing the game

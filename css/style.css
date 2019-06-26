@@ -161,8 +161,8 @@ img {
 }
 
 .fade {
-  -webkit-animation: fade 3s linear forwards;
-          animation: fade 3s linear forwards;
+  -webkit-animation: fade 1.5s linear forwards;
+          animation: fade 1.5s linear forwards;
 }
 
 * {

@@ -4,34 +4,41 @@ const music = document.getElementById("dearlyBeloved");
 const p1 = document.getElementById("p1");
 const p2 = document.getElementById("p2");
 const playGuide = document.querySelector(".playGuide");
-console.log(playGuide);
+const tarrot = document.getElementById("tarrot");
+const dream = document.getElementById("dream");
+const result = document.getElementById("result");
 
 let p1Score = document.getElementById("p1score");
 let p2Score = document.getElementById("p2score");
 let score1 = 0;
 let score2 = 0;
+let pairsFound = 0;
 
 let player1 = true;
 let newTurn = false;
 let wait = false;
 let firstCard, secondCard;
 
-card.forEach(cardFlip => {
-  cardFlip.addEventListener("click", flip);
-});
-
-start();
-function start() {
-  playMusic();
-  dealCards();
-}
-
 playGuide.addEventListener("click", fade);
 function fade() {
   playGuide.classList.add("fade");
   setTimeout(() => {
     playGuide.style.display = "none";
-  }, 3000);
+  }, 1500);
+}
+
+function addFlip() {
+  card.forEach(cardFlip => {
+    cardFlip.addEventListener("click", flip);
+  });
+}
+
+start();
+
+function start() {
+  addFlip();
+  playMusic();
+  dealCards();
 }
 
 function dealCards() {
@@ -49,7 +56,6 @@ function changeTurn() {
   } else {
     player1 = true;
   }
-  console.log(player1);
 }
 
 function flip() {
@@ -70,10 +76,22 @@ function compare() {
   if (firstCard.dataset.framework === secondCard.dataset.framework) {
     if (player1 === true) {
       score1 += 1;
+      pairsFound += 1;
       p1Score.innerHTML = score1;
     } else {
       score2 += 1;
+      pairsFound += 1;
       p2Score.innerHTML = score2;
+    }
+    if (pairsFound === 5) {
+      setTimeout(reset, 3000);
+      if (score1 > score2) {
+        result.innerHTML = "Player 1 Won";
+        console.log("lol");
+      } else {
+        console.log("rofl");
+        result.innerHTML = "Player 2 Won";
+      }
     }
 
     firstCard.removeEventListener("click", flip);
@@ -100,4 +118,18 @@ function clearBoard() {
   wait = false;
   firstCard = null;
   secondCard = null;
+}
+
+function reset() {
+  score1 = 0;
+  score2 = 0;
+  pairsFound = 0;
+  p1Score.innerHTML = score1;
+  p2Score.innerHTML = score2;
+  result.innerHTML = "";
+
+  card.forEach(cardReset => {
+    cardReset.classList.remove("flip");
+  });
+  setTimeout(addFlip, dealCards, 1000);
 }
