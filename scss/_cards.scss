@@ -1,0 +1,54 @@
+#memory {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.myTurn {
+  color: $secondary-color;
+  text-shadow: 2px 2px 5px $tertiary-color;
+}
+.cardContainer {
+  margin: auto;
+  perspective: 1000px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 1410px;
+  height: 885px;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.card {
+  transition: 1.2s ease-in;
+  transform-style: preserve-3d;
+  position: relative;
+  width: calc(20% - 20px);
+  height: 50%;
+  transform: rotateY(0deg);
+}
+
+img {
+  width: 100%;
+  max-height: auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px $tertiary-color;
+}
+
+.front,
+.back {
+  backface-visibility: hidden;
+  position: absolute;
+}
+
+.front {
+  z-index: 2;
+  transform: rotateY(180deg);
+}
+.back {
+  transform: rotateY(0deg);
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
