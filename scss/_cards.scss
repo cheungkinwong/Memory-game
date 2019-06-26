@@ -13,7 +13,7 @@
   perspective: 1000px;
   display: flex;
   flex-wrap: wrap;
-  width: 1410px;
+  width: 1300px;
   height: 885px;
   justify-content: space-between;
   z-index: 5;
@@ -26,6 +26,9 @@
   width: calc(20% - 20px);
   height: 50%;
   transform: rotateY(0deg);
+}
+.card:hover {
+  cursor: pointer;
 }
 
 img {
