@@ -111,7 +111,7 @@ function compare() {
 
 function playMusic() {
   music.loop = true;
-  // music.play();
+  music.play();
 }
 
 function clearBoard() {
