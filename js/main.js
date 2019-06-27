@@ -1,5 +1,6 @@
 const memory = document.getElementById("memory");
 const card = document.querySelectorAll(".card");
+const cardArray = Array.from(card);
 const cardContainer = document.querySelector(".cardContainer");
 const music = document.getElementById("dearlyBeloved");
 const p1 = document.getElementById("p1");
@@ -7,6 +8,8 @@ const p2 = document.getElementById("p2");
 const playGuide = document.querySelector(".playGuide");
 const cardFace = document.getElementById("cardFace");
 const result = document.getElementById("result");
+const newCard = shuffle(cardArray);
+console.log(newCard);
 
 let p1Score = document.getElementById("p1score");
 let p2Score = document.getElementById("p2score");
@@ -18,6 +21,7 @@ let player1 = true;
 let dream = false;
 let newTurn = false;
 let wait = false;
+let index = 0;
 let firstCard, secondCard;
 
 playGuide.addEventListener("click", fade);
@@ -39,14 +43,21 @@ start();
 function start() {
   addFlip();
   playMusic();
-  dealCards();
+  dealCard();
 }
 
-function dealCards() {
-  card.forEach(card => {
-    let shuffle = Math.floor(Math.random() * 11);
-    card.style.order = shuffle;
-  });
+function shuffle(array) {
+  for (let i = array.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
+function dealCard() {
+  for (let i = 0; i < 10; i++) {
+    cardContainer.appendChild(newCard[i]);
+  }
 }
 
 function changeTurn() {
@@ -104,6 +115,7 @@ function compare() {
       secondCard.classList.remove("flip");
       wait = false;
       changeTurn();
+      clearBoard();
     }, 1500);
   }
 }
@@ -173,4 +185,56 @@ function style() {
     card4.forEach(thisCard => (thisCard.src = "../img/4.jpg"));
     card5.forEach(thisCard => (thisCard.src = "../img/5.jpg"));
   }
+}
+document.addEventListener("keydown", move);
+function move(event) {
+  switch (event.keyCode) {
+    case 37:
+      left();
+      break;
+    case 39:
+      right();
+      break;
+    case 38:
+      up();
+      break;
+    case 40:
+      down();
+      break;
+    case 13:
+      enter();
+      break;
+  }
+}
+
+function left() {
+  if (index === 0 || index === 5) return;
+  newCard[index].children[1].classList.remove("selectedCard");
+  index -= 1;
+  newCard[index].children[1].classList.add("selectedCard");
+  console.log(newCard[index].children[1], "lol");
+}
+
+function right() {
+  if (index === 9 || index === 4) return;
+  newCard[index].children[1].classList.remove("selectedCard");
+  index += 1;
+  newCard[index].children[1].classList.add("selectedCard");
+}
+function up() {
+  if (index - 5 < 0) return;
+  newCard[index].children[1].classList.remove("selectedCard");
+  index -= 5;
+  newCard[index].children[1].classList.add("selectedCard");
+}
+
+function down() {
+  if (index + 5 > 9) return;
+  newCard[index].children[1].classList.remove("selectedCard");
+  index += 5;
+  newCard[index].children[1].classList.add("selectedCard");
+}
+
+function enter() {
+  document.querySelector(".selectedCard").click();
 }

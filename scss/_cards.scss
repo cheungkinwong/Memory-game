@@ -20,22 +20,23 @@
 }
 
 .card {
-  transition: 1.2s ease-in;
+  transition: 1s ease-in;
   transform-style: preserve-3d;
   position: relative;
   width: calc(20% - 20px);
-  height: 50%;
+  height: auto;
   transform: rotateY(0deg);
-}
-.card:hover {
-  cursor: pointer;
-}
-
-img {
-  width: 100%;
-  max-height: auto;
-  border-radius: 10px;
-  box-shadow: 0px 0px 10px $tertiary-color;
+  img {
+    width: 100%;
+    max-height: auto;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px $tertiary-color;
+    transition: 0.25s ease-in;
+  }
+  img:hover {
+    cursor: pointer;
+    box-shadow: 0 0 30px $secondary-color;
+  }
 }
 
 .front,
@@ -54,4 +55,10 @@ img {
 
 .flip {
   transform: rotateY(180deg);
+}
+
+.selectedCard {
+  outline: none;
+  border-color: $secondary-color;
+  box-shadow: 0 0 30px $secondary-color !important;
 }

@@ -14,7 +14,7 @@ by Cheung Kin Wong
 [x]Explanation on the page itself
 
 ##Nice-to-have features
-[ ]Make it playable by keyboard
+[x]Make it playable by keyboard
 [x]Let a user define custom image urls
 [x]Make it pleasing to look at
 [x]Multiplayer (local)
