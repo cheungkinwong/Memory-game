@@ -196,17 +196,17 @@ function style() {
   const card4 = document.querySelectorAll(".d4");
   const card5 = document.querySelectorAll(".d5");
   if (!dream) {
-    card1.forEach(thisCard => (thisCard.src = "../img/n1.jpg"));
-    card2.forEach(thisCard => (thisCard.src = "../img/n2.jpg"));
-    card3.forEach(thisCard => (thisCard.src = "../img/n3.jpg"));
-    card4.forEach(thisCard => (thisCard.src = "../img/n4.jpg"));
-    card5.forEach(thisCard => (thisCard.src = "../img/n5.jpg"));
+    card1.forEach(thisCard => (thisCard.src = "./img/n1.jpg"));
+    card2.forEach(thisCard => (thisCard.src = "./img/n2.jpg"));
+    card3.forEach(thisCard => (thisCard.src = "./img/n3.jpg"));
+    card4.forEach(thisCard => (thisCard.src = "./img/n4.jpg"));
+    card5.forEach(thisCard => (thisCard.src = "./img/n5.jpg"));
   } else {
-    card1.forEach(thisCard => (thisCard.src = "../img/1.jpg"));
-    card2.forEach(thisCard => (thisCard.src = "../img/2.jpg"));
-    card3.forEach(thisCard => (thisCard.src = "../img/3.jpg"));
-    card4.forEach(thisCard => (thisCard.src = "../img/4.jpg"));
-    card5.forEach(thisCard => (thisCard.src = "../img/5.jpg"));
+    card1.forEach(thisCard => (thisCard.src = "./img/1.jpg"));
+    card2.forEach(thisCard => (thisCard.src = "./img/2.jpg"));
+    card3.forEach(thisCard => (thisCard.src = "./img/3.jpg"));
+    card4.forEach(thisCard => (thisCard.src = "./img/4.jpg"));
+    card5.forEach(thisCard => (thisCard.src = "./img/5.jpg"));
   }
 }
 
