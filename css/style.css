@@ -94,7 +94,7 @@
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
   position: relative;
-  width: calc(20% - 20px);
+  width: calc(20% - 1em);
   height: auto;
   -webkit-transform: rotateY(0deg);
           transform: rotateY(0deg);
@@ -103,7 +103,7 @@
 .card img {
   width: 100%;
   max-height: auto;
-  border-radius: 10px;
+  border-radius: 0.5em;
   -webkit-box-shadow: 0px 0px 10px #725e85;
           box-shadow: 0px 0px 10px #725e85;
   -webkit-transition: 0.25s ease-in;
@@ -112,8 +112,8 @@
 
 .card img:hover {
   cursor: pointer;
-  -webkit-box-shadow: 0 0 30px #918053;
-          box-shadow: 0 0 30px #918053;
+  -webkit-box-shadow: 0 0 2em #918053;
+          box-shadow: 0 0 2em #918053;
 }
 
 .front,
@@ -142,8 +142,8 @@
 .selectedCard {
   outline: none;
   border-color: #918053;
-  -webkit-box-shadow: 0 0 30px #918053 !important;
-          box-shadow: 0 0 30px #918053 !important;
+  -webkit-box-shadow: 0 0 2em #918053 !important;
+          box-shadow: 0 0 2em #918053 !important;
 }
 
 #cardFace {
@@ -186,9 +186,9 @@
 
 .playGuide p {
   background-color: rgba(0, 0, 0, 0.383);
-  border-radius: 10px;
-  -webkit-box-shadow: 0px 0px 10px #725e85;
-          box-shadow: 0px 0px 10px #725e85;
+  border-radius: 0.5em;
+  -webkit-box-shadow: 0px 0px 0.5em #725e85;
+          box-shadow: 0px 0px 0.5em #725e85;
   padding: 2em;
   line-height: 2em;
   font-size: 3rem;
@@ -211,5 +211,25 @@
 html {
   font-family: "Great Vibes", cursive;
   color: #b8b8b8;
+}
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 7pt;
+  }
+  .cardContainer {
+    width: 650px;
+    height: 442px;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 5pt;
+  }
+  .cardContainer {
+    width: 325px;
+    height: 221px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

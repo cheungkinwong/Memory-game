@@ -23,19 +23,19 @@
   transition: 1s ease-in;
   transform-style: preserve-3d;
   position: relative;
-  width: calc(20% - 20px);
+  width: calc(20% - 1em);
   height: auto;
   transform: rotateY(0deg);
   img {
     width: 100%;
     max-height: auto;
-    border-radius: 10px;
+    border-radius: 0.5em;
     box-shadow: 0px 0px 10px $tertiary-color;
     transition: 0.25s ease-in;
   }
   img:hover {
     cursor: pointer;
-    box-shadow: 0 0 30px $secondary-color;
+    box-shadow: 0 0 2em $secondary-color;
   }
 }
 
@@ -60,5 +60,5 @@
 .selectedCard {
   outline: none;
   border-color: $secondary-color;
-  box-shadow: 0 0 30px $secondary-color !important;
+  box-shadow: 0 0 2em $secondary-color !important;
 }
