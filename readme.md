@@ -1,6 +1,6 @@
 # Memory Game
 
-##Mission objectives
+## Mission objectives
 Change things in the DOM (Aka canvas = cheating)
 react to keypresses
 collision detection
